@@ -31,5 +31,7 @@ print(aa.shape, bb.shape, cc.shape)
 dd, ee = c.split([1,2], dim=2)
 print(dd.shape, ee.shape)
 
-# Chunk: 按照数量来拆分
-
+# chunk: 按照数量来拆分
+print(c.shape)
+aa, bb = c.chunk(2, dim=0)   # 在第0个维度上，将c平均拆为两份
+print(aa.shape, bb.shape)
